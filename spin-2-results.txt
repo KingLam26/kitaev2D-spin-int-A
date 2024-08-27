@@ -1,0 +1,870 @@
+bp_label: bp_1
+start time: 2024-08-27 14:16:58
+end time: 2024-08-27 14:16:59
+run time: 0.01 minutes
+cores: 1
+total_sum: 1486.2136224489786
+bp_label: bp_1
+start time: 2024-08-27 14:17:53
+end time: 2024-08-27 14:17:53
+run time: 0.01 minutes
+cores: 1
+total_sum: 87778748.96908158
+bp_label: bp_1
+start time: 2024-08-27 14:18:04
+end time: 2024-08-27 14:18:05
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.025163618273153273
+bp_label: bp_1
+start time: 2024-08-27 14:19:11
+end time: 2024-08-27 14:19:11
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.02267782016676298
+bp_label: bp_1
+start time: 2024-08-27 14:19:36
+end time: 2024-08-27 14:19:36
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.02267782016676298
+bp_label: bp_1
+start time: 2024-08-27 14:20:20
+end time: 2024-08-27 14:20:20
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.04535564033352596
+bp_label: bp_1
+start time: 2024-08-27 14:20:55
+end time: 2024-08-27 14:20:56
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.02267782016676298
+bp_label: bp_1
+start time: 2024-08-27 14:20:57
+end time: 2024-08-27 14:20:58
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.02267782016676298
+bp_label: bp_1
+start time: 2024-08-27 14:21:00
+end time: 2024-08-27 14:21:00
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.02267782016676298
+bp_label: bp_1
+start time: 2024-08-27 14:22:43
+end time: 2024-08-27 14:22:44
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.02267782016676298
+bp_label: bp_4
+start time: 2024-08-27 14:24:16
+end time: 2024-08-27 14:24:17
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.09071128066705186
+bp_label: bp_5
+start time: 2024-08-27 14:25:05
+end time: 2024-08-27 14:25:06
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.09071128066705189
+bp_label: bp_2
+start time: 2024-08-27 14:25:16
+end time: 2024-08-27 14:25:16
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.02267782016676298
+bp_label: bp_1
+start time: 2024-08-27 14:27:22
+end time: 2024-08-27 14:27:22
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0
+bp_label: bp_1
+start time: 2024-08-27 14:28:15
+end time: 2024-08-27 14:28:15
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0
+bp_label: bp_1
+start time: 2024-08-27 14:28:49
+end time: 2024-08-27 14:28:50
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0
+bp_label: bp_1
+start time: 2024-08-27 14:29:39
+end time: 2024-08-27 14:29:39
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0
+bp_label: bp_1
+start time: 2024-08-27 14:30:27
+end time: 2024-08-27 14:30:28
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.02267782016676298
+bp_label: bp_1
+start time: 2024-08-27 14:31:15
+end time: 2024-08-27 14:31:16
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.01133891008338149
+bp_label: bp_1
+start time: 2024-08-27 14:32:55
+end time: 2024-08-27 14:32:55
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.01133891008338149
+bp_label: bp_1
+start time: 2024-08-27 14:33:19
+end time: 2024-08-27 14:33:20
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.01133891008338149
+bp_label: bp_1
+start time: 2024-08-27 14:34:55
+end time: 2024-08-27 14:34:55
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0028347275208453725
+bp_label: bp_1
+start time: 2024-08-27 14:35:56
+end time: 2024-08-27 14:35:57
+run time: 0.01 minutes
+cores: 1
+total_sum: inf
+bp_label: bp_1
+start time: 2024-08-27 14:39:13
+end time: 2024-08-27 14:39:13
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0
+bp_label: bp_1
+start time: 2024-08-27 14:39:42
+end time: 2024-08-27 14:39:42
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0
+bp_label: bp_1
+start time: 2024-08-27 14:40:43
+end time: 2024-08-27 14:40:44
+run time: 0.01 minutes
+cores: 1
+total_sum: inf
+bp_label: bp_1
+start time: 2024-08-27 14:40:56
+end time: 2024-08-27 14:40:57
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0028347275208453725
+bp_label: bp_1
+start time: 2024-08-27 14:41:57
+end time: 2024-08-27 14:41:58
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.01133891008338149
+bp_label: bp_1
+start time: 2024-08-27 14:50:37
+end time: 2024-08-27 14:50:38
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0
+bp_label: bp_1
+start time: 2024-08-27 14:51:16
+end time: 2024-08-27 14:51:16
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0
+bp_label: bp_1
+start time: 2024-08-27 14:51:30
+end time: 2024-08-27 14:51:30
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0
+bp_label: bp_1
+start time: 2024-08-27 14:52:03
+end time: 2024-08-27 14:52:04
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0004205703735351562
+bp_label: bp_1
+start time: 2024-08-27 14:52:31
+end time: 2024-08-27 14:52:31
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0004205703735351562
+bp_label: bp_1
+start time: 2024-08-27 14:52:46
+end time: 2024-08-27 14:52:46
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0289675981171277
+bp_label: bp_1
+start time: 2024-08-27 14:54:43
+end time: 2024-08-27 14:54:43
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.2602879747079343
+bp_label: bp_1
+start time: 2024-08-27 14:54:53
+end time: 2024-08-27 14:54:53
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0289675981171277
+bp_label: bp_1
+start time: 2024-08-27 14:55:20
+end time: 2024-08-27 14:55:20
+run time: 0.01 minutes
+cores: 1
+total_sum: 148836167.99999994
+bp_label: bp_1
+start time: 2024-08-27 14:56:28
+end time: 2024-08-27 14:56:29
+run time: 0.01 minutes
+cores: 1
+total_sum: 148836167.99999994
+bp_label: bp_1
+start time: 2024-08-27 14:56:37
+end time: 2024-08-27 14:56:37
+run time: 0.01 minutes
+cores: 1
+total_sum: 148836167.99999994
+bp_label: bp_1
+start time: 2024-08-27 14:57:26
+end time: 2024-08-27 14:57:26
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0289675981171277
+bp_label: bp_1
+start time: 2024-08-27 14:57:39
+end time: 2024-08-27 14:57:39
+run time: 0.01 minutes
+cores: 2
+total_sum: 0.0289675981171277
+bp_label: bp_2
+start time: 2024-08-27 14:57:47
+end time: 2024-08-27 14:57:47
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0289675981171277
+bp_label: bp_4
+start time: 2024-08-27 14:58:43
+end time: 2024-08-27 14:58:43
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.03105191808168578
+bp_label: bp_5
+start time: 2024-08-27 14:58:46
+end time: 2024-08-27 14:58:47
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.034880761386585864
+bp_label: bp_15
+start time: 2024-08-27 14:59:58
+end time: 2024-08-27 14:59:59
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.03105191808168578
+bp_label: bp_1
+start time: 2024-08-27 15:00:51
+end time: 2024-08-27 15:00:51
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0289675981171277
+bp_label: bp_11
+start time: 2024-08-27 15:00:58
+end time: 2024-08-27 15:00:58
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0289675981171277
+bp_label: bp_11
+start time: 2024-08-27 15:01:27
+end time: 2024-08-27 15:01:28
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0289675981171277
+bp_label: bp_1
+start time: 2024-08-27 15:01:34
+end time: 2024-08-27 15:01:34
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0289675981171277
+bp_label: bp_1
+start time: 2024-08-27 15:02:31
+end time: 2024-08-27 15:02:31
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0289675981171277
+bp_label: bp_1
+start time: 2024-08-27 15:11:35
+end time: 2024-08-27 15:11:35
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0289675981171277
+bp_label: bp_1
+start time: 2024-08-27 15:12:10
+end time: 2024-08-27 15:12:10
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0289675981171277
+bp_label: bp_1
+start time: 2024-08-27 15:13:05
+end time: 2024-08-27 15:13:05
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0289675981171277
+bp_label: bp_2
+start time: 2024-08-27 15:17:04
+end time: 2024-08-27 15:17:05
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0289675981171277
+bp_label: bp_1
+start time: 2024-08-27 15:17:12
+end time: 2024-08-27 15:17:13
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0289675981171277
+bp_label: bp_2
+start time: 2024-08-27 15:17:15
+end time: 2024-08-27 15:17:15
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0289675981171277
+bp_label: bp_4
+start time: 2024-08-27 15:18:38
+end time: 2024-08-27 15:18:38
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.03105191808168578
+bp_label: bp_14
+start time: 2024-08-27 15:18:46
+end time: 2024-08-27 15:18:46
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.034880761386585864
+bp_label: bp_4
+start time: 2024-08-27 15:18:57
+end time: 2024-08-27 15:18:57
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.03105191808168578
+bp_label: bp_4
+start time: 2024-08-27 15:19:09
+end time: 2024-08-27 15:19:10
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.12885587731186238
+bp_label: bp_1
+start time: 2024-08-27 15:19:16
+end time: 2024-08-27 15:19:17
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0289675981171277
+bp_label: bp_2
+start time: 2024-08-27 15:19:21
+end time: 2024-08-27 15:19:22
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0289675981171277
+bp_label: bp_3
+start time: 2024-08-27 15:19:27
+end time: 2024-08-27 15:19:27
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0289675981171277
+bp_label: bp_3
+start time: 2024-08-27 15:20:18
+end time: 2024-08-27 15:20:19
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0036209497646409626
+bp_label: bp_3
+start time: 2024-08-27 15:21:22
+end time: 2024-08-27 15:21:23
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0036209497646409626
+bp_label: bp_2
+start time: 2024-08-27 15:21:32
+end time: 2024-08-27 15:21:32
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0036209497646409626
+bp_label: bp_1
+start time: 2024-08-27 15:22:02
+end time: 2024-08-27 15:22:03
+run time: 0.01 minutes
+cores: 1
+total_sum: -0.0036209497646409626
+bp_label: bp_4
+start time: 2024-08-27 15:22:24
+end time: 2024-08-27 15:22:25
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.008053492331991399
+bp_label: bp_4
+start time: 2024-08-27 15:22:52
+end time: 2024-08-27 15:22:53
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.016106984663982797
+bp_label: bp_5
+start time: 2024-08-27 15:23:06
+end time: 2024-08-27 15:23:06
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.016106984663982787
+bp_label: bp_4
+start time: 2024-08-27 15:23:11
+end time: 2024-08-27 15:23:12
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.016106984663982797
+bp_label: bp_1
+start time: 2024-08-27 15:23:39
+end time: 2024-08-27 15:23:40
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_4
+start time: 2024-08-27 15:23:49
+end time: 2024-08-27 15:23:49
+run time: 0.01 minutes
+cores: 1
+total_sum: 41379024.000000045
+bp_label: bp_4
+start time: 2024-08-27 15:24:11
+end time: 2024-08-27 15:24:12
+run time: 0.01 minutes
+cores: 1
+total_sum: 82758048.00000009
+bp_label: bp_5
+start time: 2024-08-27 15:24:23
+end time: 2024-08-27 15:24:23
+run time: 0.01 minutes
+cores: 1
+total_sum: 82758048.00000003
+bp_label: bp_1
+start time: 2024-08-27 15:24:32
+end time: 2024-08-27 15:24:32
+run time: 0.01 minutes
+cores: 1
+total_sum: -37209041.999999985
+bp_label: bp_1
+start time: 2024-08-27 15:24:42
+end time: 2024-08-27 15:24:42
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_1
+start time: 2024-08-27 15:25:17
+end time: 2024-08-27 15:25:17
+run time: 0.01 minutes
+cores: 1
+total_sum: -37209041.999999985
+bp_label: bp_2
+start time: 2024-08-27 15:26:56
+end time: 2024-08-27 15:26:56
+run time: 0.01 minutes
+cores: 1
+total_sum: -37209041.999999985
+bp_label: bp_2
+start time: 2024-08-27 15:27:09
+end time: 2024-08-27 15:27:09
+run time: 0.01 minutes
+cores: 2
+total_sum: -18604520.999999993
+bp_label: bp_4
+start time: 2024-08-27 15:28:44
+end time: 2024-08-27 15:28:45
+run time: 0.01 minutes
+cores: 2
+total_sum: 41379024.000000045
+bp_label: bp_5
+start time: 2024-08-27 15:30:13
+end time: 2024-08-27 15:30:14
+run time: 0.01 minutes
+cores: 1
+total_sum: 41379024.000000015
+bp_label: bp_5
+start time: 2024-08-27 15:30:33
+end time: 2024-08-27 15:30:33
+run time: 0.01 minutes
+cores: 1
+total_sum: 82758048.00000003
+bp_label: bp_4
+start time: 2024-08-27 15:30:50
+end time: 2024-08-27 15:30:51
+run time: 0.01 minutes
+cores: 1
+total_sum: 82758048.00000009
+bp_label: bp_2
+start time: 2024-08-27 15:30:59
+end time: 2024-08-27 15:30:59
+run time: 0.01 minutes
+cores: 1
+total_sum: -37209041.999999985
+bp_label: bp_1
+start time: 2024-08-27 15:31:10
+end time: 2024-08-27 15:31:10
+run time: 0.01 minutes
+cores: 1
+total_sum: -37209041.999999985
+bp_label: bp_11
+start time: 2024-08-27 15:31:18
+end time: 2024-08-27 15:31:18
+run time: 0.01 minutes
+cores: 1
+total_sum: -37209041.999999985
+bp_label: bp_11
+start time: 2024-08-27 15:31:21
+end time: 2024-08-27 15:31:21
+run time: 0.01 minutes
+cores: 1
+total_sum: -37209041.999999985
+bp_label: bp_1
+start time: 2024-08-27 15:31:24
+end time: 2024-08-27 15:31:25
+run time: 0.01 minutes
+cores: 1
+total_sum: -37209041.999999985
+bp_label: bp_21
+start time: 2024-08-27 15:37:07
+end time: 2024-08-27 15:37:08
+run time: 0.01 minutes
+cores: 1
+total_sum: -75543807.99999993
+bp_label: bp_21
+start time: 2024-08-27 15:37:27
+end time: 2024-08-27 15:37:28
+run time: 0.02 minutes
+cores: 1
+total_sum: -184129024.00000045
+bp_label: bp_21
+start time: 2024-08-27 15:37:52
+end time: 2024-08-27 15:37:53
+run time: 0.02 minutes
+cores: 1
+total_sum: -92064512.00000022
+bp_label: bp_21
+start time: 2024-08-27 15:37:56
+end time: 2024-08-27 15:37:57
+run time: 0.01 minutes
+cores: 2
+total_sum: -92064512.00000022
+bp_label: bp_21
+start time: 2024-08-27 15:38:00
+end time: 2024-08-27 15:38:01
+run time: 0.02 minutes
+cores: 1
+total_sum: -92064512.00000022
+bp_label: bp_1
+start time: 2024-08-27 15:38:15
+end time: 2024-08-27 15:38:15
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_1
+start time: 2024-08-27 15:41:18
+end time: 2024-08-27 15:41:19
+run time: 0.02 minutes
+cores: 24
+total_sum: -18604520.999999993
+bp_label: bp_1
+start time: 2024-08-27 15:41:24
+end time: 2024-08-27 15:41:24
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_1
+start time: 2024-08-27 15:48:30
+end time: 2024-08-27 15:48:31
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_2
+start time: 2024-08-27 15:50:16
+end time: 2024-08-27 15:50:16
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_2
+start time: 2024-08-27 15:50:40
+end time: 2024-08-27 15:50:41
+run time: 0.01 minutes
+cores: 1
+total_sum: -74418083.99999997
+bp_label: bp_4
+start time: 2024-08-27 15:51:15
+end time: 2024-08-27 15:51:15
+run time: 0.01 minutes
+cores: 1
+total_sum: 331032192.00000036
+bp_label: bp_4
+start time: 2024-08-27 16:18:29
+end time: 2024-08-27 16:18:29
+run time: 0.01 minutes
+cores: 1
+total_sum: 331032192.00000036
+bp_label: bp_1
+start time: 2024-08-27 16:18:32
+end time: 2024-08-27 16:18:32
+run time: 0.01 minutes
+cores: 1
+total_sum: -74418083.99999997
+bp_label: bp_1
+start time: 2024-08-27 16:18:46
+end time: 2024-08-27 16:18:46
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_1
+start time: 2024-08-27 16:19:39
+end time: 2024-08-27 16:19:40
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_1
+start time: 2024-08-27 16:19:41
+end time: 2024-08-27 16:19:41
+run time: 0.01 minutes
+cores: 2
+total_sum: -18604520.999999993
+bp_label: bp_1
+start time: 2024-08-27 16:19:43
+end time: 2024-08-27 16:19:44
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_1
+start time: 2024-08-27 16:26:00
+end time: 2024-08-27 16:26:00
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0
+bp_label: bp_1
+start time: 2024-08-27 16:31:51
+end time: 2024-08-27 16:31:51
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_1
+start time: 2024-08-27 16:31:55
+end time: 2024-08-27 16:31:56
+run time: 0.01 minutes
+cores: 2
+total_sum: -18604520.999999993
+bp_label: bp_1
+start time: 2024-08-27 16:31:57
+end time: 2024-08-27 16:31:58
+run time: 0.01 minutes
+cores: 2
+total_sum: -18604520.999999993
+bp_label: bp_2
+start time: 2024-08-27 16:32:06
+end time: 2024-08-27 16:32:06
+run time: 0.01 minutes
+cores: 2
+total_sum: -18604520.999999993
+bp_label: bp_2
+start time: 2024-08-27 16:32:14
+end time: 2024-08-27 16:32:15
+run time: 0.01 minutes
+cores: 12
+total_sum: -18604520.999999993
+bp_label: bp_2
+start time: 2024-08-27 16:32:17
+end time: 2024-08-27 16:32:17
+run time: 0.01 minutes
+cores: 12
+total_sum: -18604520.999999993
+bp_label: bp_2
+start time: 2024-08-27 16:45:09
+end time: 2024-08-27 16:45:10
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_2
+start time: 2024-08-27 16:45:37
+end time: 2024-08-27 16:45:38
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_2
+start time: 2024-08-27 16:46:44
+end time: 2024-08-27 16:46:45
+run time: 0.01 minutes
+cores: 1
+total_sum: -19200443.468036495
+bp_label: bp_2
+start time: 2024-08-27 16:48:33
+end time: 2024-08-27 16:48:33
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_2
+start time: 2024-08-27 16:48:45
+end time: 2024-08-27 16:48:45
+run time: 0.01 minutes
+cores: 1
+total_sum: -19200443.468036495
+bp_label: bp_2
+start time: 2024-08-27 16:53:42
+end time: 2024-08-27 16:53:42
+run time: 0.01 minutes
+cores: 1
+total_sum: -19200443.468036495
+bp_label: bp_2
+start time: 2024-08-27 16:55:10
+end time: 2024-08-27 16:55:11
+run time: 0.01 minutes
+cores: 1
+total_sum: -19200443.468036495
+bp_label: bp_2
+start time: 2024-08-27 16:56:11
+end time: 2024-08-27 16:56:11
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0
+bp_label: bp_2
+start time: 2024-08-27 16:58:28
+end time: 2024-08-27 16:58:29
+run time: 0.01 minutes
+cores: 1
+total_sum: 0.0
+bp_label: bp_2
+start time: 2024-08-27 16:58:40
+end time: 2024-08-27 16:58:41
+run time: 0.01 minutes
+cores: 1
+total_sum: -19200443.468036495
+bp_label: bp_2
+start time: 2024-08-27 16:59:05
+end time: 2024-08-27 16:59:06
+run time: 0.01 minutes
+cores: 1
+total_sum: -19200443.468036495
+bp_label: bp_2
+start time: 2024-08-27 16:59:40
+end time: 2024-08-27 16:59:41
+run time: 0.01 minutes
+cores: 1
+total_sum: -19200443.468036495
+bp_label: bp_2
+start time: 2024-08-27 17:04:29
+end time: 2024-08-27 17:04:29
+run time: 0.01 minutes
+cores: 1
+total_sum: -74418083.99999997
+bp_label: bp_2
+start time: 2024-08-27 17:12:33
+end time: 2024-08-27 17:12:34
+run time: 0.01 minutes
+cores: 1
+total_sum: -74418083.99999997
+bp_label: bp_2
+start time: 2024-08-27 17:12:46
+end time: 2024-08-27 17:12:46
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_2
+start time: 2024-08-27 17:12:51
+end time: 2024-08-27 17:12:52
+run time: 0.01 minutes
+cores: 3
+total_sum: -18604520.999999993
+bp_label: bp_11
+start time: 2024-08-27 17:13:01
+end time: 2024-08-27 17:13:01
+run time: 0.01 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_21
+start time: 2024-08-27 17:13:05
+end time: 2024-08-27 17:13:06
+run time: 0.02 minutes
+cores: 1
+total_sum: -92064512.00000022
+bp_label: bp_4
+start time: 2024-08-27 17:14:32
+end time: 2024-08-27 17:14:32
+run time: 0.01 minutes
+cores: 1
+total_sum: 41379024.000000045
+bp_label: bp_4
+start time: 2024-08-27 17:15:35
+end time: 2024-08-27 17:15:36
+run time: 0.01 minutes
+cores: 1
+total_sum: 41379024.000000045
+bp_label: bp_100
+start time: 2024-08-27 17:23:16
+end time: 2024-08-27 17:23:19
+run time: 0.04 minutes
+cores: 12
+total_sum: -223702.6285376969
+bp_label: bp_100
+start time: 2024-08-27 17:24:25
+end time: 2024-08-27 17:24:27
+run time: 0.04 minutes
+cores: 12
+total_sum: -6.651365089553819e+18
+bp_label: bp_100
+start time: 2024-08-27 17:25:11
+end time: 2024-08-27 17:25:13
+run time: 0.04 minutes
+cores: 12
+total_sum: -2.5981894881069604e+16
+bp_label: bp_100
+start time: 2024-08-27 17:41:13
+end time: 2024-08-27 17:41:16
+run time: 0.04 minutes
+cores: 12
+total_sum: -3.6052814083126436e+19
+bp_label: bp_1
+start time: 2024-08-27 17:42:05
+end time: 2024-08-27 17:42:06
+run time: 0.01 minutes
+cores: 12
+total_sum: -2.1608181901769454e+18
+bp_label: bp_1
+start time: 2024-08-27 17:42:30
+end time: 2024-08-27 17:42:31
+run time: 0.01 minutes
+cores: 12
+total_sum: -2.1608181901769457e+18
+bp_label: bp_100
+start time: 2024-08-27 17:43:13
+end time: 2024-08-27 17:43:15
+run time: 0.04 minutes
+cores: 12
+total_sum: -3605281408312643.5
+bp_label: bp_100
+start time: 2024-08-27 17:43:36
+end time: 2024-08-27 17:43:38
+run time: 0.04 minutes
+cores: 12
+total_sum: -3.605281408312644e+19
+bp_label: bp_1
+start time: 2024-08-27 17:57:23
+end time: 2024-08-27 17:57:24
+run time: 0.01 minutes
+cores: 12
+total_sum: -1860452.099999999
+bp_label: bp_1
+start time: 2024-08-27 17:57:48
+end time: 2024-08-27 17:57:48
+run time: 0.01 minutes
+cores: 12
+total_sum: -18604520.999999993
+bp_label: bp_1
+start time: 2024-08-27 17:59:02
+end time: 2024-08-27 17:59:02
+run time: 0.01 minutes
+cores: 12
+total_sum: -18604520.999999993

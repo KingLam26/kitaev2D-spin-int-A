@@ -1,0 +1,6 @@
+bp_label: bp_1
+start time: 2024-08-27 18:00:15
+end time: 2024-08-27 18:00:17
+run time: 0.04 minutes
+cores: 12
+total_sum: -3605281408312643.5
