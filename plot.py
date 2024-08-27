@@ -5,52 +5,64 @@ import matplotlib.pyplot as plt
 from math import cos, sin, pi
 
 getcontext().prec = 30
+spin_S = 2
 
+
+##### Koga results #####
+spin_2_coeff_a = Decimal('18604521')
+spin_2_coeff_b = Decimal('-82758048')
+spin_2_coeff_c = Decimal('129273554')
+spin_2_coeff_d = Decimal('5138022400')
+
+spin_3_coeff_a = Decimal('36052814083126422740')
+spin_3_coeff_b = Decimal('-176028114277347622010')
+spin_3_coeff_c = Decimal('287126525350219384887')
+spin_3_coeff_d = Decimal('152769160756403896320000')
+
+spin_1_5_coeff_a = Decimal('3214648723397092084')
+spin_1_5_coeff_b = Decimal('1646995686930432837306')
+spin_1_5_coeff_c = Decimal('91522768044989658195')
+spin_1_5_coeff_d = Decimal('3076979551468152422400000')
 
 ##### extract results #####
-# Folder path is the current directory where the script is located
-folder_path = os.path.dirname(os.path.abspath(__file__))
-results_folder_path = os.path.join(folder_path, 'Run 1 - results')
-
-# List of bp indices to skip
-skip_indices = {10, 11, 12}
-
-# Dictionary to store the bp index and corresponding decimal value
-bp_values = {}
-
-# Loop through bp_1 to bp_19
-for i in range(1, 20):
-    if i in skip_indices:
-        continue
+"""
+def read_results(filename):
+    bp_dict = {}
+    with open(filename, 'r') as file:
+        for line in file:
+            # Strip whitespace from the line
+            line = line.strip()
+            
+            # Ignore empty lines
+            if not line:
+                continue
+            
+            # Split the line into key and value at the first colon found
+            key, value = line.split(':', 1)
+            
+            # Remove any extra whitespace from key and value
+            key = key.strip()
+            value = value.strip()
+            
+            # define the parameters
+            if key == "spin_S":
+                spin_S = int(value)
+            elif key == "multi_factor":
+                multi_factor = int(value)
+            elif key[:3] == "bp_":
+                bp_dict[key] = [int(digit) for digit in str(value)]
     
-    # Construct the filename
-    file_name = f'results-2-bp_{i}.txt'
-    file_path = os.path.join(results_folder_path, file_name)
-    
-    # Ensure the file exists before opening
-    if os.path.isfile(file_path):
-        with open(file_path, 'r') as file:
-            # Read all lines in the file
-            lines = file.readlines()
-            # Extract the 6th line
-            if len(lines) >= 6:
-                line = lines[5].strip()
-                # Extract the number after "Total Sum: "
-                if line.startswith("Total Sum:"):
-                    value_str = line.split("Total Sum:")[1].strip()
-                    # Convert the extracted string to a Decimal
-                    decimal_value = Decimal(value_str)
-                    # Store in the dictionary with the bp index
-                    bp_values[f'bp_{i}'] = decimal_value
-            else:
-                print(f"File {file_name} does not have enough lines.")
-    else:
-        print(f"File {file_name} not found.")
+    return spin_S, multi_factor, bp_dict
+
+
+spin_S, multi_factor, bp_dict = read_model_params('params-3.txt')
+
+
 
 # Print or use the extracted values
 for key, value in bp_values.items():
     print(f"{key}: {value}")
-
+"""
 
 ##### compute J_eff_sum #####
 def trigo(t):
@@ -77,7 +89,7 @@ def J_eff_sum_lam(t):
         (bp_values['bp_8'] + bp_values['bp_18']) * (x**6) * (y**6) +
         (bp_values['bp_9'] + bp_values['bp_19']) * (x**6) * (y**6)
     )
-    """
+
     total_sum = Decimal(
         bp_values['bp_1'] * (x**6) * (y**6) +
         bp_values['bp_2'] * (x**6) * (y**6) +
@@ -90,25 +102,37 @@ def J_eff_sum_lam(t):
         (bp_values['bp_8'] + bp_values['bp_18']) * (x**6) * (y**6) +
         (bp_values['bp_9'] + bp_values['bp_19']) * (x**6) * (y**6)
     )
-
-    # Return the negative of the total sum as the coupling constant
-    return -total_sum
+    """
+    
+    if spin_S == 2:
+        sum = Decimal(
+            spin_2_coeff_a * (x**8 + y**8) * 4+
+            spin_2_coeff_b * (x**6) * (y**2) * 8 + spin_2_coeff_b * (x**2) * (y**6) * 8+ 
+            spin_2_coeff_c * (x**4) * (y**4) * 16
+        )
+        sum/= spin_2_coeff_d
+    
+    return sum
 
 def J_eff_sum_koga(t):
 
     x, y = trigo(t)
 
-    d = Decimal('3076979551468152422400000')
-    a = Decimal('3214648723397092084')
-    b = Decimal('1646995686930432837306')
-    c = Decimal('91522768044989658195')
-
-    # Calculate the expression using the given formula
-    sum = Decimal(
-        a * (x**6) * (y**6) +
-        b * (x**2) * (y**2) * ((x**2) - (y**2))**4 +
-        c * (x**4) * (y**4) * ((x**2) - (y**2))**2
-    )
+    if spin_S == 1.5:
+        sum = Decimal(
+            spin_1_5_coeff_a * (x**6) * (y**6) +
+            spin_1_5_coeff_b * (x**2) * (y**2) * ((x**2) - (y**2))**4 +
+            spin_1_5_coeff_c * (x**4) * (y**4) * ((x**2) - (y**2))**2
+        )
+        sum/=spin_1_5_coeff_d
+    
+    if spin_S == 2:
+    	sum = Decimal(
+    	    spin_2_coeff_a * (x**8 + y**8) +
+        	spin_2_coeff_b * (x**6) * (y**2) + spin_2_coeff_b * (x**2) * (y**6) + 
+        	spin_2_coeff_c * (x**4) * (y**4)
+    	)
+    	sum/= spin_2_coeff_d
     
     return sum
 
@@ -135,12 +159,12 @@ normalized_values_koga = normalized_values(J_eff_sum_koga, t_values)
 
 # Plot the results
 plt.figure(figsize=(10, 6))
-plt.plot(t_values / pi, normalized_values_lam, label='lam')
-plt.plot(t_values / pi, normalized_values_koga, label='koga')
+plt.plot(t_values / pi, normalized_values_lam, label='lam', linewidth = 2)
+plt.plot(t_values / pi, normalized_values_koga, label='koga', linewidth = 1)
 plt.xlabel('t (radians) / pi')
 plt.ylabel('Nomalized J_eff_sum')
 plt.title('Nomalized J_eff_sum against theta')
 plt.yscale('log')
 plt.legend()
 plt.grid(True)
-plt.savefig('normalized_coupling_constant.png', format='png')
+plt.savefig('plot.svg', format='svg')
