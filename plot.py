@@ -3,10 +3,11 @@ from decimal import Decimal, getcontext
 import numpy as np
 import matplotlib.pyplot as plt
 from math import cos, sin, pi
+from scipy.optimize import fsolve
 
 getcontext().prec = 30
-spin_S = 2
-consider_all_combis_switch = True
+spin_S = 1.5
+consider_all_combis_switch = False
 
 
 ##### Koga results #####
@@ -20,12 +21,29 @@ spin_3_coeff_nu = Decimal('-176028114277347622010')
 spin_3_coeff_la = Decimal('287126525350219384887')
 spin_3_coeff_d = Decimal('152769160756403896320000')
 
-spin_1_5_coeff_a = Decimal('3214648723397092084')
-spin_1_5_coeff_b = Decimal('1646995686930432837306')
-spin_1_5_coeff_c = Decimal('91522768044989658195')
-spin_1_5_coeff_d = Decimal('3076979551468152422400000')
+spin_1_5_coeff_mu = Decimal('3214648723397092084')
+spin_1_5_coeff_nu = Decimal('1646995686930432837306')
+spin_1_5_coeff_la = Decimal('91522768044989658195')
+spin_1_5_coeff_denom = Decimal('3076979551468152422400000')
 
 ##### Lam results #####
+spin_1_5_coeff_a = Decimal('91893.9942230409066477709971778')
+spin_1_5_coeff_b = Decimal('-228749.634355255091820103311867')
+spin_1_5_coeff_c = Decimal('3185298.38652854643898375623228')
+spin_1_5_coeff_d = Decimal('-1352004.10963680688601971400754')
+spin_1_5_coeff_e = Decimal('574735.100907972295494161386568')
+spin_1_5_coeff_f = Decimal('535358.042592992637547406398269')
+spin_1_5_coeff_g = Decimal('575520.108202348095700865382205')
+
+if consider_all_combis_switch == False:
+    spin_1_5_coeff_a /= 4
+    spin_1_5_coeff_b /= 8
+    spin_1_5_coeff_c /= 64
+    spin_1_5_coeff_d /= 32
+    spin_1_5_coeff_e /= 16
+    spin_1_5_coeff_f /= 16
+    spin_1_5_coeff_g /= 16
+
 spin_2_coeff_a = Decimal('18604521')
 spin_2_coeff_b = Decimal('92064512')
 spin_2_coeff_c = Decimal('-41379024')
@@ -34,50 +52,58 @@ spin_3_coeff_a = Decimal('36052814083126422740')
 spin_3_coeff_b = Decimal('427101825544440584157')
 spin_3_coeff_c = Decimal('124066871221800233745')
 
-spin_4_coeff_a = 
-spin_4_coeff_b = 
-spin_4_coeff_c = 
-spin_4_coeff_d = 
-spin_4_coeff_e = 
-spin_4_coeff_f = 
+spin_4_coeff_a = 1.290249294643517e-05
+spin_4_coeff_b = 6.0074698994905354e-05 # computed result has minus sign
+spin_4_coeff_c = 9.480000447372665e-05
+spin_4_coeff_d = 0.0002798033970269736
+spin_4_coeff_e = 0.0004415883619644383 # computed result has minus sign
+spin_4_coeff_f = 0.0006969445768607373
 
-##### extract results #####
 """
-def read_results(filename):
-    bp_dict = {}
-    with open(filename, 'r') as file:
-        for line in file:
-            # Strip whitespace from the line
-            line = line.strip()
-            
-            # Ignore empty lines
-            if not line:
-                continue
-            
-            # Split the line into key and value at the first colon found
-            key, value = line.split(':', 1)
-            
-            # Remove any extra whitespace from key and value
-            key = key.strip()
-            value = value.strip()
-            
-            # define the parameters
-            if key == "spin_S":
-                spin_S = int(value)
-            elif key == "multi_factor":
-                multi_factor = int(value)
-            elif key[:3] == "bp_":
-                bp_dict[key] = [int(digit) for digit in str(value)]
+print(spin_4_coeff_b / spin_4_coeff_a)
+print(spin_4_coeff_c / spin_4_coeff_a)
+print(spin_4_coeff_d / spin_4_coeff_a)
+print(spin_4_coeff_e / spin_4_coeff_a)
+print(spin_4_coeff_f / spin_4_coeff_a)
+
+a = spin_4_coeff_a
+b = spin_4_coeff_b
+c = spin_4_coeff_c
+d = spin_4_coeff_d
+e = spin_4_coeff_e
+f = spin_4_coeff_f
+
+if consider_all_combis_switch:
+    a*=4
+    b*=8
+    c*=8
+    d*=16
+    e*=16
+    f*=16
+
+print(b / a)
+print(c / a)
+print(d / a)
+print(e / a)
+print(f / a)
+
+def compute_z(x):
+    z = a*(1+x**16) - 2*b*(x**2 + x**14) + (2*c+d)*(x**4 + x **12) + (-2*b-2*e)*(x**6 + x**10) + (2*d+2*a+f)*(x**8)
+    return z
+
+def solve_for_x(x0):
     
-    return spin_S, multi_factor, bp_dict
+    # Use fsolve to find the root
+    solution = fsolve(compute_z, x0)
+    return solution[0]  # Return the solution
 
+x0 = 0.5
+x_solution = solve_for_x(x0)
 
-spin_S, multi_factor, bp_dict = read_model_params('params-3.txt')
+print(x_solution, compute_z(x_solution))
 
-# Print or use the extracted values
-for key, value in bp_values.items():
-    print(f"{key}: {value}")
 """
+
 
 ##### compute J_eff_sum #####
 def trigo(t):
@@ -91,6 +117,16 @@ def J_eff_sum_lam(t):
     x, y = trigo(t)
 
     # Calculate the sum of terms
+    
+    if spin_S == 1.5:
+        x10_y2 = spin_1_5_coeff_e * (x**10 * y**2)
+        x8_y4 = (2*spin_1_5_coeff_b + 2*spin_1_5_coeff_d) * (x**8 + y**4)
+        x6_y6 = (spin_1_5_coeff_a + spin_1_5_coeff_c + 2*spin_1_5_coeff_f + 2*spin_1_5_coeff_g) * (x**6 * y**6)
+        x4_y8 = (2*spin_1_5_coeff_b + 2*spin_1_5_coeff_d) * (x**4 * y**8)
+        x2_y10 = spin_1_5_coeff_e * (x**2 * y**10)
+
+        sum = x10_y2 + x8_y4 + x6_y6 + x4_y8 + x2_y10
+
     if spin_S == 2:
         if consider_all_combis_switch == True:
             x8 = Decimal(spin_2_coeff_a * 4 * (x**8))
@@ -137,6 +173,21 @@ def J_eff_sum_lam(t):
 
         sum = Decimal(x12 + y12 + x6_y6 + x4_y8 + x8_y4 + x2_y10 + x10_y2)
         sum = Decimal(sum / spin_3_coeff_d)
+    
+    if spin_S == 4:
+        x16 = (spin_4_coeff_a * 4) * (x**16)
+        x14_y2 = (-2*spin_4_coeff_b * 8) * (x**14 * y**2)
+        x12_y4 = (2*spin_4_coeff_c * 8 + spin_4_coeff_d * 16) * (x**12 * y**4)
+        x10_y6 = (-2*spin_4_coeff_b * 8 - 2*spin_4_coeff_e * 16) * (x**10 * y**6)
+        x8_y8 = (2*spin_4_coeff_d * 16 + 2*spin_4_coeff_a * 4 + spin_4_coeff_f * 16) * (x**8 * y**8)
+
+        x6_y10 = (-2*spin_4_coeff_b * 8 - 2*spin_4_coeff_e * 16) * (x**6 * y**10)
+        x4_y12 = (2*spin_4_coeff_c * 8 + spin_4_coeff_d * 16) * (x**4 * y**12)
+        x2_y14 = (-2*spin_4_coeff_b * 8) * (x**2 * y**14)
+        y16 = (spin_4_coeff_a * 4) * (y**16)
+
+        sum = x16 + x14_y2 + x12_y4 + x10_y6 + x8_y8 + x6_y10 + x4_y12 + x2_y14 + y16
+
     return sum
 
 def J_eff_sum_koga(t):
@@ -144,10 +195,10 @@ def J_eff_sum_koga(t):
     x, y = trigo(t)
 
     if spin_S == 1.5:
-        sum = Decimal(spin_1_5_coeff_a * (x**6) * (y**6) +
-                      spin_1_5_coeff_b * (x**2) * (y**2) * ((x**2) - (y**2))**4 +
-                      spin_1_5_coeff_c * (x**4) * (y**4) * ((x**2) - (y**2))**2)
-        sum/=spin_1_5_coeff_d
+        sum = Decimal(spin_1_5_coeff_mu * (x**6) * (y**6) +
+                      spin_1_5_coeff_nu * (x**2) * (y**2) * ((x**2) - (y**2))**4 +
+                      spin_1_5_coeff_la * (x**4) * (y**4) * ((x**2) - (y**2))**2)
+        sum/=spin_1_5_coeff_denom
     
     if spin_S == 2:
         sum = Decimal(spin_2_coeff_mu * (x**8 + y**8) +
@@ -163,10 +214,18 @@ def J_eff_sum_koga(t):
         sum = Decimal(sum / spin_3_coeff_d)
 
     if spin_S == 4:
-        x16 = spin_4_coeff_a * (x**16)
-        x14_y2 = -2*spin_4_coeff_b * (x**14 * y**2)
+        x16 = (spin_4_coeff_a) * (x**16)
+        x14_y2 = (-2*spin_4_coeff_b) * (x**14 * y**2)
+        x12_y4 = (2*spin_4_coeff_c + spin_4_coeff_d) * (x**12 * y**4)
+        x10_y6 = (-2*spin_4_coeff_b - 2*spin_4_coeff_e) * (x**10 * y**6)
+        x8_y8 = (2*spin_4_coeff_d + 2*spin_4_coeff_a + spin_4_coeff_f) * (x**8 * y**8)
 
+        x6_y10 = (-2*spin_4_coeff_b - 2*spin_4_coeff_e) * (x**6 * y**10)
+        x4_y12 = (2*spin_4_coeff_c + spin_4_coeff_d) * (x**4 * y**12)
+        x2_y14 = (-2*spin_4_coeff_b) * (x**2 * y**14)
+        y16 = (spin_4_coeff_a) * (y**16)
 
+        sum = x16 + x14_y2 + x12_y4 + x10_y6 + x8_y8 + x6_y10 + x4_y12 + x2_y14 + y16
 
     return sum
 
