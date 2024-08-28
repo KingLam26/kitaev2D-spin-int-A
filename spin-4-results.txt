@@ -1,0 +1,27 @@
+bp_label: bp_1
+start time: 2024-08-28 17:24:32
+end time: 2024-08-28 17:24:52
+run time: 0.33 minutes
+cores: 24
+total_sum: -1.290249294643517e-05
+
+bp_label: bp_1
+start time: 2024-08-28 17:25:09
+end time: 2024-08-28 17:25:30
+run time: 0.34 minutes
+cores: 24
+total_sum: -1.2902492946435166e-05
+
+bp_label: bp_2
+start time: 2024-08-28 17:25:39
+end time: 2024-08-28 17:29:25
+run time: 3.77 minutes
+cores: 24
+total_sum: 6.0074698994905354e-05
+
+bp_label: bp_3
+start time: 2024-08-28 17:25:49
+end time: 2024-08-28 17:31:08
+run time: 5.32 minutes
+cores: 24
+total_sum: -9.480000447372665e-05

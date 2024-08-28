@@ -34,7 +34,12 @@ spin_3_coeff_a = Decimal('36052814083126422740')
 spin_3_coeff_b = Decimal('427101825544440584157')
 spin_3_coeff_c = Decimal('124066871221800233745')
 
-
+spin_4_coeff_a = 
+spin_4_coeff_b = 
+spin_4_coeff_c = 
+spin_4_coeff_d = 
+spin_4_coeff_e = 
+spin_4_coeff_f = 
 
 ##### extract results #####
 """

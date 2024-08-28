@@ -177,3 +177,21 @@ end time: 2024-08-28 11:10:25
 run time: 0.03 minutes
 cores: 24
 total_sum: 1.2406687122179978e+16
+bp_label: bp_1
+start time: 2024-08-28 17:01:03
+end time: 2024-08-28 17:01:04
+run time: 0.02 minutes
+cores: 2
+total_sum: 3605281408312643.5
+bp_label: bp_11
+start time: 2024-08-28 17:01:10
+end time: 2024-08-28 17:01:12
+run time: 0.02 minutes
+cores: 2
+total_sum: 3605281408312643.5
+bp_label: bp_7
+start time: 2024-08-28 17:01:21
+end time: 2024-08-28 17:01:28
+run time: 0.10 minutes
+cores: 2
+total_sum: -1.2406687122179988e+16

@@ -100,11 +100,11 @@ def process_permute(bond_permute):
 
     # combi computation
     Z_fixed_combi_sum = compute_combi_coeff(bond_permute, A_sites_combi, Z_sites, A_sites)
-    unique_count = len(np.unique(A_sites))
+    #unique_count = len(np.unique(A_sites))
     #permute_sum = Z_fixed_combi_sum_Trie * (2 ** unique_count)
-    permute_sum = Z_fixed_combi_sum
+    #permute_sum = Z_fixed_combi_sum
 
-    return bond_permute, permute_sum
+    return bond_permute, Z_fixed_combi_sum
 
 # process a single permute - support #
 def gen_A_sites_combi(A_sites):
@@ -232,6 +232,26 @@ def combi_propagate_one_step(ini_spin_config, spin_config, step, Z_sites, A_site
         else:
             Z_spin_factor = 6
 
+    # logic block for spin 4
+    if spin_S == 4:
+        if (A_ini_spin == 1 and A_action == -1) or (A_ini_spin == -1 and A_action == 1) or A_ini_spin == 0:
+            A_spin_factor = 20
+        elif (A_ini_spin == 2 and A_action == -1) or (A_ini_spin == -2 and A_action == 1) or (A_ini_spin == 1 and A_action == 1) or (A_ini_spin == -1 and A_action == -1):
+            A_spin_factor = 18
+        elif (A_ini_spin == 3 and A_action == -1) or (A_ini_spin == -3 and A_action == 1) or (A_ini_spin == 2 and A_action == 1) or (A_ini_spin == -2 and A_action == -1):
+            A_spin_factor = 14
+        else:
+            A_spin_factor = 8
+
+        if Z_ini_spin == 1 or Z_ini_spin == 0:
+            Z_spin_factor = 20
+        elif Z_ini_spin == 2 or Z_ini_spin == -1:
+            Z_spin_factor = 18
+        elif Z_ini_spin == 3 or Z_ini_spin == -2:
+            Z_spin_factor = 14
+        else:
+            Z_spin_factor = 8
+
     spin_factor = math.sqrt(A_spin_factor * Z_spin_factor)
 
     # update spin sites
@@ -241,7 +261,7 @@ def combi_propagate_one_step(ini_spin_config, spin_config, step, Z_sites, A_site
     # compute energy gap (always positive)
     excited_energy = 0.0
     for site in [0,2,4,5]:
-        excited_energy += spin_config[site] * ini_spin_config[site]
+        excited_energy += spin_config[site] * spin_S
     int_z_bond_energy = spin_config[1] * spin_config[3]
     excited_energy+=int_z_bond_energy
     energy_factor = abs(excited_energy - gs_energy)

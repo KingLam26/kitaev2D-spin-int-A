@@ -118,7 +118,7 @@ def main():
         )
 
         # modify total sum: spin factors of 2
-        add_spin_factor = 2**(spin_S*8) 
+        add_spin_factor = 2**(spin_S*8)
         total_sum/=add_spin_factor
 
         # modify total sum: any multiplicative factors from Koga's paper for easy comparison
