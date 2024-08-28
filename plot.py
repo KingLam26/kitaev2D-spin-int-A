@@ -161,7 +161,13 @@ def J_eff_sum_koga(t):
                       spin_3_coeff_la * (x**4) * (y**4))
         sum = Decimal(sum * (x**2 - y**2)**2)
         sum = Decimal(sum / spin_3_coeff_d)
-        
+
+    if spin_S == 4:
+        x16 = spin_4_coeff_a * (x**16)
+        x14_y2 = -2*spin_4_coeff_b * (x**14 * y**2)
+
+
+
     return sum
 
 
