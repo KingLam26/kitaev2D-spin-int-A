@@ -191,7 +191,7 @@ def compute_combi_coeff(bond_permute, A_site_combis, Z_sites, A_sites):
 
         Z_fixed_combi_sum+=combi_coeff
         #print(spin_config)
-        print(bond_permute, A_site_combi, combi_coeff)
+        #print(bond_permute, A_site_combi, combi_coeff)
 
     return Z_fixed_combi_sum
 

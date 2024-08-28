@@ -16,7 +16,7 @@ def consumer_task(queue, results_values, value_locks, counter, counter_lock, tot
         # Process the permutation
         if compute_switch:
             result = process_permute(list(bond_permute))[1]
-        print(bond_permute, result)
+        #print(bond_permute, result)
 
         # Safely add the result to one of the shared lists
         list_index = counter.value % len(results_values)  # Round-robin assignment to lists
