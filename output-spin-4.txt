@@ -44,3 +44,9 @@ end time: 2024-08-28 20:51:23
 run time: 196.92 minutes
 cores: 24
 total_sum: -0.0006969445768607373
+bp_label: bp_1
+start time: 2024-08-29 09:12:40
+end time: 2024-08-29 09:12:50
+run time: 0.16 minutes
+cores: 25
+total_sum: -1.290249294643517e-05

@@ -868,3 +868,15 @@ end time: 2024-08-27 17:59:02
 run time: 0.01 minutes
 cores: 12
 total_sum: -18604520.999999993
+bp_label: bp_1
+start time: 2024-08-29 16:51:19
+end time: 2024-08-29 16:51:19
+run time: 0.00 minutes
+cores: 1
+total_sum: -18604520.999999993
+bp_label: bp_5
+start time: 2024-08-29 16:53:56
+end time: 2024-08-29 16:53:56
+run time: 0.00 minutes
+cores: 1
+total_sum: 41379024.000000015

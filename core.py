@@ -188,6 +188,7 @@ def compute_combi_coeff(bond_permute, A_site_combis, Z_sites, A_sites):
         # compute combi_coeff
         # minus sign for EHS_sign - see v3
         combi_coeff = (OHS_sign * cum_spin_factor) / cum_energy_factor
+        print(cum_energy_factor)
 
         Z_fixed_combi_sum+=combi_coeff
         #print(spin_config)

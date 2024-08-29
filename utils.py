@@ -150,7 +150,7 @@ def save_final_results(bp_label, start_time_str, end_time_str, runtime_minutes, 
 
 ##### model parameters ####
 # read in from text file and obtain spin_S and bp_dict
-spin_S, multi_factor, bp_dict = read_model_params('params-4.txt')
+spin_S, multi_factor, bp_dict = read_model_params('input-spin-2.txt')
 
 # fixed parameters for all diagrams for integer spin
 y_bonds = [0,3]
@@ -162,7 +162,7 @@ gs_energy = spin_S * spin_S * 5
 A_combis_dict = gen_A_combis_dict(combi_sizes=[2,4,6,8])
 
 # parameters on saving results
-save_final_results_filename = "spin-4-results.txt"
+save_final_results_filename = f"output-spin-{spin_S}.txt"
 save_all_raw_filename = ""
 
 
