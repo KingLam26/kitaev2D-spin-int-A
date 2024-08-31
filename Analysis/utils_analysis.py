@@ -81,11 +81,19 @@ def J_eff_sum_lam(t, coeff_tuple, spin_S):
     if spin_S == '1.5':
         a,b,c,d,e,f,g = coeff_tuple
 
+        """
         x10_y2 = Decimal(e * ((x**10) * (y**2)))
         x8_y4 = Decimal((-2*b - 2*d) * ((x**8) * (y**4)))
         x6_y6 = Decimal((a + c + 2*f + 2*g) * ((x**6) * (y**6)))
         x4_y8 = Decimal((-2*b - 2*d) * ((x**4) * (y**8)))
         x2_y10 = Decimal(e * ((x**2) * (y**10)))
+        """
+
+        x10_y2 = Decimal(c * ((x**10) * (y**2)))
+        x8_y4 = Decimal((-2*b - 2*f) * ((x**8) * (y**4)))
+        x6_y6 = Decimal((a + g + 2*e + 2*d) * ((x**6) * (y**6)))
+        x4_y8 = Decimal((-2*b - 2*f) * ((x**4) * (y**8)))
+        x2_y10 = Decimal(c * ((x**2) * (y**10)))
 
         sum = Decimal(x10_y2 + x8_y4 + x6_y6 + x4_y8 + x2_y10)
 
@@ -93,9 +101,9 @@ def J_eff_sum_lam(t, coeff_tuple, spin_S):
         a,b,c = coeff_tuple
 
         x8 = Decimal(a * (x**8))
-        x6_y2 = Decimal(-2*c * ((x**6) * (y**2)))
-        x4_y4 = Decimal((2*a + b) * ((x**4) * (y**4)))
-        x2_y6 = Decimal(-2*c * ((x**2) * (y**6)))
+        x6_y2 = Decimal(-2*b * ((x**6) * (y**2)))
+        x4_y4 = Decimal((2*a + c) * ((x**4) * (y**4)))
+        x2_y6 = Decimal(-2*b * ((x**2) * (y**6)))
         y8 = Decimal(a * (y**8))
 
         sum = Decimal(x8 + y8 + x4_y4 + x6_y2 + x2_y6)
@@ -105,11 +113,11 @@ def J_eff_sum_lam(t, coeff_tuple, spin_S):
 
         x12 = Decimal(a * (x**12))
         y12 = Decimal(a * (y**12))
-        x6_y6 = Decimal((-2*a - 2*b) * ((x**6) * (y**6)))
-        x4_y8 = Decimal((2*c + b) * (x**4 * y**8))
-        x8_y4 = Decimal((2*c + b) * (y**4 * x**8))
-        x2_y10 = Decimal((-2*c) * (y**10 * x**2))
-        x10_y2 = Decimal((-2*c) * (y**2 * x**10))
+        x6_y6 = Decimal((-2*a - 2*c) * ((x**6) * (y**6)))
+        x4_y8 = Decimal((2*b + c) * (x**4 * y**8))
+        x8_y4 = Decimal((2*b + c) * (y**4 * x**8))
+        x2_y10 = Decimal((-2*b) * (y**10 * x**2))
+        x10_y2 = Decimal((-2*b) * (y**2 * x**10))
 
         sum = Decimal(x12 + y12 + x6_y6 + x4_y8 + x8_y4 + x2_y10 + x10_y2)
     
