@@ -10,7 +10,7 @@ os.chdir(script_dir)
 
 ##### helper functions ####
 def read_results(filename):
-    koga_dict, lam_dict, lam_combi_dict = {}, {}, {}
+    koga_dict, lam_dict = {}, {}
     with open(filename, 'r') as file:
         for line in file:
 
@@ -33,40 +33,29 @@ def read_results(filename):
                 # Extract sub-key (a, b, c, d, e, f, g / mu, nu, la, denom)
                 key_sub = key_part.split('_')[-1]
 
-                # Check if there's a comma in the value string
-                if ',' in value_str:
-                    value_decimal_str, integer_str = value_str.split(',')
-                    value_decimal = Decimal(value_decimal_str.strip())
-                    integer_value = int(integer_str.strip())
-                else:
-                    # If there's no integer part after the comma, assume it to be 1
-                    value_decimal = Decimal(value_str.strip())
+                # extract diagram coefficient after :
+                value_decimal = Decimal(value_str.strip())
 
             if line.startswith('koga'):
-                # Initialize dictionary for the main key if it doesn't exist
+                # Initialize dictionary for main key if it doesn't exist
                 if key_main not in koga_dict:
                     koga_dict[key_main] = []
                 # Assign the decimal value to the appropriate sub-key
                 koga_dict[key_main].append(value_decimal)
 
             elif line.startswith('lam'):
-                # Initialize the dictionary for the main key if it doesn't exist
+                # Initialize dictionary for main key if it doesn't exist
                 if key_main not in lam_dict:
                     lam_dict[key_main] = []
                 
-                if key_main not in lam_combi_dict:
-                    lam_combi_dict[key_main] = []                
-
                 # Assign the Decimal and Decimal * value_integer to the appropriate sub-key
                 lam_dict[key_main].append(Decimal(value_decimal))
-                lam_combi_dict[key_main].append(Decimal(value_decimal*integer_value))
 
     # convert all lists to tuples in all three dicts
     koga_dict = {k: tuple(v) if isinstance(v, list) else v for k, v in koga_dict.items()}
     lam_dict = {k: tuple(v) if isinstance(v, list) else v for k, v in lam_dict.items()}
-    lam_combi_dict = {k: tuple(v) if isinstance(v, list) else v for k, v in lam_combi_dict.items()}
 
-    return koga_dict, lam_dict, lam_combi_dict
+    return koga_dict, lam_dict
 
 def trigo(t):
     x,y = Decimal(cos(t)), Decimal(sin(t))
@@ -80,14 +69,6 @@ def J_eff_sum_lam(t, coeff_tuple, spin_S):
     
     if spin_S == '1.5':
         a,b,c,d,e,f,g = coeff_tuple
-
-        """
-        x10_y2 = Decimal(e * ((x**10) * (y**2)))
-        x8_y4 = Decimal((-2*b - 2*d) * ((x**8) * (y**4)))
-        x6_y6 = Decimal((a + c + 2*f + 2*g) * ((x**6) * (y**6)))
-        x4_y8 = Decimal((-2*b - 2*d) * ((x**4) * (y**8)))
-        x2_y10 = Decimal(e * ((x**2) * (y**10)))
-        """
 
         x10_y2 = Decimal(c * ((x**10) * (y**2)))
         x8_y4 = Decimal((-2*b - 2*f) * ((x**8) * (y**4)))
@@ -180,11 +161,10 @@ def normalize_J_eff(func, coeff, spin_S, t_values):
     
     return normalized_J_eff
 
-def plot_koga_lam(t_values, norm_J_eff_lam, norm_J_eff_lam_combi, norm_J_eff_koga, spin_S):
+def plot_koga_lam(t_values, norm_J_eff_lam,  norm_J_eff_koga, spin_S):
 
     plt.figure(figsize=(10, 6))
     plt.plot(t_values / pi, norm_J_eff_lam, label='lam', linewidth = 3)
-    plt.plot(t_values / pi, norm_J_eff_lam_combi, label='lam_combi')
     plt.plot(t_values / pi, norm_J_eff_koga, label='koga', linewidth = 1)
     plt.xlabel(r'$t$ (rad) / $pi$')
     plt.ylabel(r'Nomalized $J_{eff}$')

@@ -99,10 +99,10 @@ def process_permute(bond_permute):
     A_sites_combi = gen_A_sites_combi(A_sites)
 
     # combi computation
+    # removed unique_count = len(np.unique(A_sites))
+    # no need to consider (2 ** unique_count) multiplicative factor (A sites)
+    # and certainly no need for different starting configurations at the Z-links
     Z_fixed_combi_sum = compute_combi_coeff(bond_permute, A_sites_combi, Z_sites, A_sites)
-    #unique_count = len(np.unique(A_sites))
-    #permute_sum = Z_fixed_combi_sum_Trie * (2 ** unique_count)
-    #permute_sum = Z_fixed_combi_sum
 
     return bond_permute, Z_fixed_combi_sum
 
