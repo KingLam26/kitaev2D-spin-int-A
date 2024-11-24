@@ -1,3 +1,7 @@
 # Ignore all __pycache__ directories
 __pycache__/
 .DS_Store
+.output-spin-2.txt
+.output-spin-3.txt
+.output-spin-4.txt
+.Analysis/
