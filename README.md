@@ -18,9 +18,9 @@ https://doi.org/10.1103/PhysRevB.99.104408). With further code optimization (e.g
 
 ## File Structure
 The project consists of the following files:
-1. ``utils.py``: Contains utility functions and helper code for processing model parameters, generating combinatorial arrays, and saving results.
-2. ``core.py``: Implements core functionalities, including generating and processing unique permutations with constraints.
-3. ``main_parallel.py``: Orchestrates the parallel processing framework, including producers and consumers for handling permutations across multiple cores.
+1. ``utils.py``: Contains utility functions and helper code for reading in model parameters, generating combinatorial arrays, fine-tuning parallel processing parameters, and saving results.
+4. ``core.py``: Implements core functionalities, including generating and processing unique permutations with constraints.
+5. ``main_parallel.py``: Orchestrates the parallel processing framework, including producers and consumers for handling permutations across multiple cores.
 
 As of 26/09/24, we have used the code for spin-2, spin-3, spin-4.
 Matches Koga's results exactly.
