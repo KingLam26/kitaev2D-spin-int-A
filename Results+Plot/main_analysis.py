@@ -33,4 +33,4 @@ norm_J_eff_lam = normalize_J_eff(J_eff_sum_lam, lam_coeff, spin_S, t_values)
 norm_J_eff_koga = normalize_J_eff(J_eff_sum_koga, koga_coeff, spin_S, t_values)
 
 # Plot the results
-plot_koga_lam(t_values, norm_J_eff_lam, norm_J_eff_koga, spin_S)
+plot_koga_lam_single(t_values, norm_J_eff_lam, norm_J_eff_koga, spin_S)

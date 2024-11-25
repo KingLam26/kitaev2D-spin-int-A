@@ -1,8 +1,9 @@
 """
-This module contains utility functions and constants for processing combinatorial 
-arrays, reading model parameters from input files, and saving results. It is 
-designed for use in a computational workflow dealing with combinatorial 
-permutations and parallel processing for integer spin systems.
+This support module contains utility functions and constants for 
+reading model parameters from input files, generating combinatorial arrays
+for use within each permute, and saving results. It is designed to be used
+within the broader computational workflow involving parallel processing
+to compute diagram amplitudes in the context of integer spin systems.
 
 Functions:
 - read_model_params(filename): Reads spin, bond permutations, and a multiplicative factor 

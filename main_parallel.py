@@ -1,7 +1,8 @@
 """
-This is the main Python file to execute. It utilizes parallel processing to handle large-scale computations for spin systems involving permutations
-and energy summations. It employs producer-consumer architecture for efficient processing and uses multiprocessing 
-to distribute the workload across multiple CPU cores.
+This is the main Python file to execute. It utilizes parallel processing 
+to handle large-scale computations for spin systems involving permutations
+and energy summations. It employs producer-consumer architecture for efficient processing 
+and uses multiprocessing to distribute the workload across multiple CPU cores.
 
 Key Features:
 1. **Parallel Processing**:

@@ -161,34 +161,19 @@ def normalize_J_eff(func, coeff, spin_S, t_values):
     
     return normalized_J_eff
 
-def plot_koga_lam(t_values, norm_J_eff_lam,  norm_J_eff_koga, spin_S):
+def plot_koga_lam_single(t_values, norm_J_eff_lam,  norm_J_eff_koga, spin_S):
 
     plt.figure(figsize=(10, 6))
-    plt.plot(t_values / pi, norm_J_eff_lam, label='lam', linewidth = 3)
-    plt.plot(t_values / pi, norm_J_eff_koga, label='koga', linewidth = 1)
-    plt.xlabel(r'$t$ (rad) / $pi$')
-    plt.ylabel(r'Nomalized $J_{eff}$')
-    plt.title(r'Nomalized $J_{eff}$ against $t$' + f': spin-{spin_S}', pad = 10)
+    plt.plot(t_values / pi, norm_J_eff_lam, label='this paper', linewidth = 4)
+    if spin_S !="4":
+        plt.plot(t_values / pi, norm_J_eff_koga, label='arXiv:1811.05668', linewidth = 1)
+    plt.xlabel(r'$t$ (rad) / $pi$', fontsize=14, labelpad=10)
+    plt.ylabel(r'Nomalized $J_{eff}$', fontsize=14, labelpad=10)
+    plt.xticks(fontsize=14)  # x-ticks font size
+    plt.yticks(fontsize=14)  # y-ticks font size
+    plt.title(r'Nomalized $J_{eff}$ against $t$' + f': spin-{spin_S}', pad = 15, fontsize=16)
     plt.yscale('log')
     plt.legend()
     plt.grid(True)
     plt.savefig(f'plot-spin-{spin_S}.png', format='png', dpi=600)
     plt.close()
-
-"""
-def compute_z(x):
-    z = a*(1+x**16) - 2*b*(x**2 + x**14) + (2*c+d)*(x**4 + x **12) + (-2*b-2*e)*(x**6 + x**10) + (2*d+2*a+f)*(x**8)
-    return z
-
-def solve_for_x(x0):
-    
-    # Use fsolve to find the root
-    solution = fsolve(compute_z, x0)
-    return solution[0]  # Return the solution
-
-x0 = 0.5
-x_solution = solve_for_x(x0)
-
-print(x_solution, compute_z(x_solution))
-
-"""
