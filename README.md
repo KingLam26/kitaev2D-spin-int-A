@@ -21,3 +21,24 @@ The project consists of the following files:
 1. ``utils.py``: Contains utility functions and helper code for reading in model parameters, generating combinatorial arrays, fine-tuning parallel processing parameters, and saving results.
 2. ``core.py``: Implements core functionalities, including generating and processing unique permutations, calculating spin and energy factors, handling overall signs, returns the contributing coefficient to $J_{\mathrm{eff}}$ for each permute.
 3. ``main_parallel.py``: Orchestrates the parallel processing framework, including producers and consumers for handling permutations across multiple cores.
+4. ``input-spin-S.txt``: Text file with specifications on the spin and list of diagrams that one can pick to compute.
+
+## How to Use
+1. **Prepare Input Parameters**: Create a text file with model parameters, e.g., ``input-spin-2.txt``.
+2. **Run the Program**: Execute ``main_parallel.py`` from the command line, ``python main_parallel.py bp_1 4``, where ``bp_1`` specifies the label for bp in the input file corresponding to the diagram to be considered, and ``4`` specifies the number of CPU cores for parallel processing.
+3. Processed results are saved to an output file named ``output-spin-<spin_S>.txt``.
+
+## Requirements
+1. ``Python 3.x``
+2. ``NumPy``
+3. ``Multiprocessing``
+
+## Sample Output
+```
+bp_label: bp_1
+start time: 2024-08-23 14:14:32
+end time: 2024-08-23 14:15:35
+run time: 1.06 minutes
+cores: 24
+total_sum: -91893.99422304098
+```
