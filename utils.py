@@ -1,3 +1,32 @@
+"""
+This module contains utility functions and constants for processing combinatorial 
+arrays, reading model parameters from input files, and saving results. It is 
+designed for use in a computational workflow dealing with combinatorial 
+permutations and parallel processing for integer spin systems.
+
+Functions:
+- read_model_params(filename): Reads spin, bond permutations, and a multiplicative factor 
+  from an input file and organizes them into useful data structures.
+- gen_A_combis_dict(combi_sizes): Generates valid combinatorial arrays for the 
+  specified sizes based on physical constraints.
+- save_all_raw(data_list): Saves raw bond permutation data and results to a text file.
+- save_final_results(bp_label, start_time_str, end_time_str, runtime_minutes, cores, total_sum): 
+  Appends the final results of a computation, including metadata like runtime and total energy, to a file.
+
+Constants:
+- `spin_S`, `multi_factor`, and `bp_dict` are derived from an input file for the model parameters.
+- Fixed parameters such as `y_bonds`, `x_bonds`, `bond_site_dict`, and `num_of_sites` define 
+  the structure of the system being analyzed.
+- Saving parameters include filenames for results and raw data.
+- Parallel processing constants configure the behavior of computational tasks, including 
+  locking, queue size, and output verbosity.
+
+Usage:
+Import this module to use its utility functions and constants:
+    from utils import read_model_params, gen_A_combis_dict, save_all_raw, save_final_results
+"""
+
+##### import libraries ####
 import numpy as np
 import itertools
 

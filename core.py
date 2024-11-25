@@ -1,3 +1,30 @@
+"""
+This modeule performs combinatorial and energy computations for spin systems with specific configurations.
+It generates permutations of bonds, computes spin configurations, and evaluates energy factors and coefficients
+based on quantum mechanical properties of the system. The calculations involve spin ladder operators, site mappings,
+and energy propagation across spin sites.
+
+Key Functions:
+1. Permutation Generation:
+    - `next_unique_permute`: Generates the next lexicographical permutation of an array in-place.
+    - `gen_next_permute`: Iteratively yields all unique permutations of a given array.
+    - `num_bond_permutes`: Calculates the number of unique permutations for an array with repeated elements.
+
+2. Spin System Processing:
+    - `process_permute`: Processes a single bond permutation to calculate the sum of combination coefficients.
+    - `compute_combi_coeff`: Calculates the combination coefficient for a specific bond and site configuration.
+    - `combi_propagate_one_step`: Handles spin and energy updates for each step of the spin propagation process.
+    - `gen_A_sites_combi`: Generates all possible combinations for A-sites based on given replacement rules.
+    - `gen_ini_spin_config`: Produces the initial spin configuration based on input sites and actions.
+
+3. Sign Calculations:
+    - `gen_OHS_sign`: Computes the overall sign based on the spin and site configuration.
+
+This script can be adapted for quantum mechanical models, particularly those involving spin interactions
+and site-specific computations for energy propagation.
+"""
+
+
 ##### import #####
 from utils import *
 import numpy as np

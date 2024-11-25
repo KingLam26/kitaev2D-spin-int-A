@@ -42,3 +42,5 @@ run time: 1.06 minutes
 cores: 24
 total_sum: -91893.99422304098
 ```
+
+The diagram amplitude along with the relative sign is given by ``total_sum``.

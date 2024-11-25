@@ -1,3 +1,37 @@
+"""
+This is the main Python file to execute. It utilizes parallel processing to handle large-scale computations for spin systems involving permutations
+and energy summations. It employs producer-consumer architecture for efficient processing and uses multiprocessing 
+to distribute the workload across multiple CPU cores.
+
+Key Features:
+1. **Parallel Processing**:
+    - A producer generates all unique permutations of a given bond configuration and places them in a shared queue.
+    - Multiple consumers process the permutations in parallel, calculating energy or coefficients and updating shared results.
+
+2. **Shared Memory Management**:
+    - Results and counters are stored in shared memory (`mp.Value`) to enable safe concurrent access.
+    - Locks (`mp.Lock`) are used to manage access to shared variables, ensuring thread safety.
+
+3. **Dynamic Runtime Feedback**:
+    - Periodically prints progress updates, including the percentage of permutations processed, runtime, estimated time remaining, and processing speed.
+
+4. **Graceful Termination**:
+    - Handles `KeyboardInterrupt` gracefully, ensuring processes terminate cleanly.
+    - Sends sentinel values (`None`) to signal consumers when no more tasks are available.
+
+5. **Modifications and Scalability**:
+    - Scales across multiple cores using a configurable number of consumer processes.
+    - Allows runtime modifications to summation factors (e.g., spin factors, multiplicative adjustments from research papers).
+
+6. **Main Execution Flow**:
+    - `main()` orchestrates the initialization, producer-consumer setup, and final result aggregation.
+    - Input arguments define the bond permutation configuration and number of cores to utilize.
+
+7. **Runtime Statistics**:
+    - Tracks start and end times, total runtime, and provides detailed performance metrics.
+    - Results, including runtime and computed sums, are saved for further analysis.
+"""
+
 from core import *
 from utils import *
 from datetime import datetime
